@@ -6,18 +6,10 @@ const port = 3000;
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-    
+
     res.render("index.ejs");
 });
 
-app.get("/time", (req,res) => {
-    const currentTime = new Date();
-
-    res.send({ 
-        time: currentTime
-    });
-
-});
 
 app.listen(port, ()=> {
     console.log(`Server running on port: ${port}`);
