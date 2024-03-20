@@ -20,7 +20,7 @@ app.get('/cpu', (req, res) => {
     lines.forEach(line => {
     res.write(line + '\n');
     });    
-    res.end();
+    res.send();
 });
 });
 
